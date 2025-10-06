@@ -32,11 +32,12 @@ function runStarfieldAnimation(canvas: HTMLCanvasElement, ctx: CanvasRenderingCo
     const METEOR_SPAWN_INTERVAL_MS = 3000;
 
     const starConfig: StarConfig = {
-        slowest: { count: 1000, size: { min: 0.4, max: 0.4 }, speed: { min: 0.001, max: 0.01 }},
-        slow: { count: 500, size: { min: 0.4, max: 0.7 }, speed: { min: 0.01, max: 0.3 }},
-        medium: { count: 120, size: { min: 0.7, max: 0.9 }, speed: { min: 0.3, max: 0.5 }},
+        slowest: { count: 2000, size: { min: 0.3, max: 0.4 }, speed: { min: 0.1, max: 0.3 }},
+        slow: { count: 750, size: { min: 0.4, max: 0.7 }, speed: { min: 0.3, max: 0.4 }},
+        medium: { count: 120, size: { min: 0.7, max: 0.9 }, speed: { min: 0.4, max: 0.5 }},
         fast: { count: 20, size: { min: 0.9, max: 1.1 }, speed: { min: 0.5, max: 0.7 }},
-        fastest: { count: 10, size: { min: 1.1, max: 1.3 }, speed: { min: 0.7, max: 1.2 }}
+        fastest: { count: 10, size: { min: 1.1, max: 1.3 }, speed: { min: 0.7, max: 1.2 }},
+        main: { count: 3, size: { min: 1.6, max: 2.0 }, speed: { min: 0.7, max: 1.2 }}
     };
 
     let stars: Star[] = [];

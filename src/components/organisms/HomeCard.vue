@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import HomeHeaderText from "../atoms/HomeHeaderText.vue";
+import HomeHeader from "../atoms/HomeHeader.vue";
+import HomeCardContent from "../molecules/HomeCardContent.vue";
 
 const cardEl = ref<HTMLElement | null>(null)
 
@@ -57,11 +58,11 @@ onUnmounted(() => {
         ref="cardEl"
         :style="{
         transform: cardTransform,
-        transition: isTransitionEnabled ? 'transform 0.35s ease-out' : 'none'
+        transition: isTransitionEnabled ? 'transform 0.2s ease-out' : 'none'
       }"
-        class="flex justify-center bg-neutral-900/20 backdrop-blur-2xl rounded-3xl w-[33rem] h-[41rem] shadow-2xl shadow-black/50"
+        class="flex justify-start gap-4 flex-col bg-black/20 backdrop-blur-2xl rounded-3xl w-164 h-164 shadow-2xl shadow-purple-500/10 border border-white/20"
     >
-      <HomeHeaderText />
+      <HomeCardContent class="ml-10 mr-10 text-lg font-sans"/>
     </div>
   </div>
 </template>
@@ -75,6 +76,7 @@ h1 {
   transform: scale(.2);
   animation: scaleUp .7s forwards ease-in-out;
 }
+
 
 @keyframes scaleUp {
   to {
